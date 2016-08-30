@@ -25,27 +25,18 @@
             skipFirstVisit: true
         });
     </script>
-
     <title>Dota 2 Picker</title>
-    <!-- <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
-    <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="css/framework7.ios.min.css">
     <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
-
-    <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/main.css">
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
-
 </head>
 
 <body>
     <script src="js/matchup.js"></script>
     <script src="js/list.js"></script>
-    <!-- Status bar overlay for fullscreen mode-->
+
     <div class="statusbar-overlay"></div>
-    <!-- Panels overlay-->
     <div class="panel-overlay"></div>
-    <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal">
         <div class="content-block-title">How to use this app</div>
         <div class="content-block">
@@ -60,6 +51,7 @@
             </p>
         </div>
     </div>
+
     <!-- Views-->
     <div class="views">
         <!-- Your main view, should have "view-main" class-->
@@ -69,11 +61,9 @@
                 <!-- Navbar inner for Index page-->
                 <div data-page="index" class="navbar-inner">
                     <div class="left">
-                        <!-- <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a> -->
                         <a href="#" class="link open-panel">Help</i></a>
                     </div>
                     <div class="center sliding">Dota 2 Counterpicker</div>
-
                 </div>
                 <div data-page="updates" class="navbar-inner cached">
                     <div class="left sliding">
@@ -106,7 +96,8 @@
                             <div class="content-block-inner">
                                 <p>Select your enemy heroes and get good counter-picks!</p>
                                 <p>Database last updated: <span id="date"></span></p>
-                                <p><strong>Remember to add this to your home screen if you haven't already!</strong></p>
+                                <p>App version: <span id="version" style="font-family: monospace;"></span></p>
+                                <!-- <p><strong>Remember to add this to your home screen if you haven't already!</strong></p> -->
                             </div>
                         </div>
 
@@ -151,13 +142,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- <div class="content-block-title">Side panels</div>
-                        <div class="content-block">
-                            <div class="row">
-                                <div class="col-50"><a href="#" data-panel="left" class="button open-panel">Left Panel</a></div>
-                                <div class="col-50"><a href="#" data-panel="right" class="button open-panel">Right Panel</a></div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
                 <!-- Updates Page-->
@@ -259,16 +243,20 @@
                 <!-- Counterpick Page-->
                 <div data-page="counterpick" class="page cached layout-dark">
                     <div class="page-content">
-                        <div class="content-block-title counterpick_label">Enemy Picks</div>
+                        <div class="content-block-title counterpick-label">Enemy Picks</div>
                         <div class="content-block">
+
                             <div id="counterpick-field">
 
                             </div>
+
                             </br>
-                            <div class="list-block-label counterpick_label_none">
+
+                            <div class="list-block-label counterpick-label-none">
                                 <center>Add enemy heroes to see counterpicks</center>
                             </div>
-                            <div class="list-block-label counterpick_label_description">Click on hero icons to remove</div>
+
+                            <div class="list-block-label counterpick-label-description">Click on hero icons to remove</div>
 
                         </div>
                     </div>
@@ -283,7 +271,7 @@
     </div>
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="js/framework7.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 
 </body>
 
