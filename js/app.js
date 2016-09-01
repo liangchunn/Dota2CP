@@ -191,6 +191,7 @@ var DotaPickerApp = {
             //Convert outputHeroes to arrays and sort accordingly
             var outputHeroesArray = this.sortByValues(this.outputHeroes);
 
+
             //Start creating list...
             output += "<div>";
             for (var x = 0; x < this.listElements + 5; x++) {
@@ -204,7 +205,7 @@ var DotaPickerApp = {
                 }
             }
 
-            for (var y = (this.heroesLength - 2); y > ((this.heroesLength - 2) - this.listElements); y--) {
+            for (var y = outputHeroesArray.length - this.listElements; y < outputHeroesArray.length; y++) {
                 heroName = outputHeroesArray[y][0].replace(/\-/g, " ").capitalize();
                 heroAdvantage = outputHeroesArray[y][1].toFixed(3);
                 color = this.getColor(heroAdvantage);
