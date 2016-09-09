@@ -7,7 +7,7 @@ String.prototype.capitalize = function() {
 };
 
 var DotaPickerApp = {
-    VERSION: '3.2.2',
+    VERSION: '3.2.3',
     initialized: false,
     init: function(data) {
         //instanceName
@@ -280,13 +280,26 @@ var DotaPickerApp = {
     }
 };
 
+
+var isAndroid = Framework7.prototype.device.android === true;
+var isIos = Framework7.prototype.device.ios === true;
+
+var $$ = Dom7;
+
+// Change Through navbar layout to Fixed
+if (isAndroid) {
+    // Change class
+    $$('.view.navbar-through').removeClass('navbar-through').addClass('navbar-fixed');
+    // And move Navbar into Page
+    $$('.view .navbar').prependTo('.view .page');
+}
+
+
 //Framerwork7 init
 var App = new Framework7({
-    animateNavBackIcon: true
+    animateNavBackIcon: true,
+    material: isAndroid ? true : false,
 });
-
-//Export selectors engine
-var $$ = Dom7;
 
 //Add main View
 var mainView = App.addView('.view-main', {
