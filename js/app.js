@@ -296,5 +296,8 @@ var mainView = App.addView('.view-main', {
     domCache: true
 });
 
-//DotaPickerApp init
-DotaPickerApp.init(data);
+$(document).ready(function(){
+    $.getJSON("js/matchup.json", function(data){
+        DotaPickerApp.init(data);
+    })
+});
