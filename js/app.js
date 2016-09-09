@@ -93,33 +93,21 @@ var DotaPickerApp = {
             //Create new object and set to 1 (already exist)
             this.addedHeroes[hero] = 1;
             this.picks++;
-        }
 
-        //Get best counters
-        for (var x = this.heroesLength; x > (this.heroesLength - (this.listElements + 2)); x--) {
-            for (property in this.data[hero][x]) {
-                //Check if hero in outputHeroes does not exist
-                if (!this.outputHeroes.hasOwnProperty(property)) {
-                    this.outputHeroes[property] = (this.data[hero][x][property] * -1);
-                } else {
-                    //if it exists, add the percentages.
-                    this.outputHeroes[property] += (this.data[hero][x][property] * -1);
+            for (var y = 0; y < this.heroesLength; y++) {
+                for (property in this.data[hero][y]) {
+                    //Check if hero in outputHeroes does not exist
+                    if (!this.outputHeroes.hasOwnProperty(property)) {
+                        this.outputHeroes[property] = (this.data[hero][y][property] * -1);
+                    } else {
+                        //if it exists, add the percentages.
+                        this.outputHeroes[property] += (this.data[hero][y][property] * -1);
+                    }
                 }
             }
+
         }
 
-        //Get worse counters
-        for (var y = 0; y < this.heroesLength; y++) {
-            for (property in this.data[hero][y]) {
-                //Check if hero in outputHeroes does not exist
-                if (!this.outputHeroes.hasOwnProperty(property)) {
-                    this.outputHeroes[property] = (this.data[hero][y][property] * -1);
-                } else {
-                    //if it exists, add the percentages.
-                    this.outputHeroes[property] += (this.data[hero][y][property] * -1);
-                }
-            }
-        }
 
         this.updateView();
     },
@@ -197,6 +185,7 @@ var DotaPickerApp = {
             for (var x = 0; x < this.listElements + 5; x++) {
                 heroName = outputHeroesArray[x][0].replace(/\-/g, " ").capitalize();
                 heroAdvantage = outputHeroesArray[x][1].toFixed(3);
+                console.log(heroAdvantage);
                 color = this.getColor(heroAdvantage);
                 if (this.addedHeroes[outputHeroesArray[x][0]] !== 1) {
                     output += "<div class='row' style='color:" + color + ";'>";
