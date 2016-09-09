@@ -7,7 +7,7 @@ String.prototype.capitalize = function() {
 };
 
 var DotaPickerApp = {
-    VERSION: '3.2.3',
+    VERSION: '3.2.4',
     initialized: false,
     init: function(data) {
         //instanceName
