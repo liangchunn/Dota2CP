@@ -1,13 +1,13 @@
 // /* jshint shadow:true */
-
-String.prototype.capitalize = function() {
-    return this.replace(/(?:^|\s)\S/g, function(a) {
-        return a.toUpperCase();
-    });
-};
+//
+// String.prototype.capitalize = function() {
+//     return this.replace(/(?:^|\s)\S/g, function(a) {
+//         return a.toUpperCase();
+//     });
+// };
 
 var DotaPickerApp = {
-    VERSION: '3.2.4',
+    VERSION: '3.3.0',
     initialized: false,
     init: function(data) {
         //instanceName
@@ -31,6 +31,8 @@ var DotaPickerApp = {
             'techies', 'templar-assassin', 'terrorblade', 'tidehunter', 'timbersaw', 'tinker', 'tiny', 'treant-protector', 'troll-warlord', 'tusk', 'underlord', 'undying', 'ursa', 'vengeful-spirit', 'venomancer', 'viper', 'visage', 'warlock', 'weaver',
             'windranger', 'winter-wyvern', 'witch-doctor', 'wraith-king', 'zeus'
         ];
+        this.heroString = {"abaddon":"Abaddon","alchemist":"Alchemist","ancient-apparition":"Ancient Apparition","anti-mage":"Anti Mage","arc-warden":"Arc Warden","axe":"Axe","bane":"Bane","batrider":"Batrider","beastmaster":"Beastmaster","bloodseeker":"Bloodseeker","bounty-hunter":"Bounty Hunter","brewmaster":"Brewmaster","bristleback":"Bristleback","broodmother":"Broodmother","centaur-warrunner":"Centaur Warrunner","chaos-knight":"Chaos Knight","chen":"Chen","clinkz":"Clinkz","clockwerk":"Clockwerk","crystal-maiden":"Crystal Maiden","dark-seer":"Dark Seer","dazzle":"Dazzle","death-prophet":"Death Prophet","disruptor":"Disruptor","doom":"Doom","dragon-knight":"Dragon Knight","drow-ranger":"Drow Ranger","earth-spirit":"Earth Spirit","earthshaker":"Earthshaker","elder-titan":"Elder Titan","ember-spirit":"Ember Spirit","enchantress":"Enchantress","enigma":"Enigma","faceless-void":"Faceless Void","gyrocopter":"Gyrocopter","huskar":"Huskar","invoker":"Invoker","io":"Io","jakiro":"Jakiro","juggernaut":"Juggernaut","keeper-of-the-light":"Keeper Of The Light","kunkka":"Kunkka","legion-commander":"Legion Commander","leshrac":"Leshrac","lich":"Lich","lifestealer":"Lifestealer","lina":"Lina","lion":"Lion","lone-druid":"Lone Druid","luna":"Luna","lycan":"Lycan","magnus":"Magnus","medusa":"Medusa","meepo":"Meepo","mirana":"Mirana","morphling":"Morphling","naga-siren":"Naga Siren","natures-prophet":"Natures Prophet","necrophos":"Necrophos","night-stalker":"Night Stalker","nyx-assassin":"Nyx Assassin","ogre-magi":"Ogre Magi","omniknight":"Omniknight","oracle":"Oracle","outworld-devourer":"Outworld Devourer","phantom-assassin":"Phantom Assassin","phantom-lancer":"Phantom Lancer","phoenix":"Phoenix","puck":"Puck","pudge":"Pudge","pugna":"Pugna","queen-of-pain":"Queen Of Pain","razor":"Razor","riki":"Riki","rubick":"Rubick","sand-king":"Sand King","shadow-demon":"Shadow Demon","shadow-fiend":"Shadow Fiend","shadow-shaman":"Shadow Shaman","silencer":"Silencer","skywrath-mage":"Skywrath Mage","slardar":"Slardar","slark":"Slark","sniper":"Sniper","spectre":"Spectre","spirit-breaker":"Spirit Breaker","storm-spirit":"Storm Spirit","sven":"Sven","techies":"Techies","templar-assassin":"Templar Assassin","terrorblade":"Terrorblade","tidehunter":"Tidehunter","timbersaw":"Timbersaw","tinker":"Tinker","tiny":"Tiny","treant-protector":"Treant Protector","troll-warlord":"Troll Warlord","tusk":"Tusk","underlord":"Underlord","undying":"Undying","ursa":"Ursa","vengeful-spirit":"Vengeful Spirit","venomancer":"Venomancer","viper":"Viper","visage":"Visage","warlock":"Warlock","weaver":"Weaver","windranger":"Windranger","winter-wyvern":"Winter Wyvern","witch-doctor":"Witch Doctor","wraith-king":"Wraith King","zeus":"Zeus"};
+
         this.heroesLength = this.heroes.length;
 
         //Used to control how many good/bad picks in the list
@@ -52,7 +54,7 @@ var DotaPickerApp = {
         //add heroes to list
         for (var x = 0; x < this.heroesLength; x++) {
             list.add({
-                item: "<div class='item-media' id='selector-" + this.heroes[x] + "'><i class='icon'>" + "<img src='icons/" + this.heroes[x] + ".png'/>  " + "</i></div>" + "<div class='item-inner'><div class='item-title'>" + this.heroes[x].replace(/\-/g, " ").capitalize() + "</div></div>",
+                item: "<div class='item-media' id='selector-" + this.heroes[x] + "'><i class='icon'>" + "<img src='icons/" + this.heroes[x] + ".png'/>  " + "</i></div>" + "<div class='item-inner'><div class='item-title'>" + this.heroString[this.heroes[x]] + "</div></div>",
                 eventHandler: this.instanceName + ".addHero('" + this.heroes[x] + "');"
             });
         }
@@ -68,7 +70,6 @@ var DotaPickerApp = {
             $("#searchinput").val('').focus();
             list.search();
         });
-
 
         //hide the first prototype element
         //should find out a way to remove this and use dynamic list items instead?
@@ -108,7 +109,6 @@ var DotaPickerApp = {
 
         }
 
-
         this.updateView();
     },
     removeHero: function(hero) {
@@ -128,22 +128,10 @@ var DotaPickerApp = {
             }
         }
 
-        //Delete best counter heroes from JSON object
-        for (var x = this.heroesLength; x > (this.heroesLength - (this.listElements + 2)); x--) {
-            for (property in this.data[hero][x]) {
-                if (this.outputHeroes.hasOwnProperty(property)) {
-                    this.outputHeroes[property] -= (this.data[hero][x][property] * -1);
-                    if (this.outputHeroes[property] === 0 || this.outputHeroes[property].toFixed(3) === 0.00) {
-                        delete this.outputHeroes[property];
-                    }
-                }
-            }
-        }
-
-        //Delete worse counter heroes from JSON object
         for (var y = 0; y < this.heroesLength; y++) {
             for (property in this.data[hero][y]) {
                 if (this.outputHeroes.hasOwnProperty(property)) {
+                    console.log(property);
                     this.outputHeroes[property] -= (this.data[hero][y][property] * -1);
                     if (this.outputHeroes[property] === 0 || this.outputHeroes[property].toFixed(3) === 0.00) {
                         delete this.outputHeroes[property];
@@ -183,9 +171,8 @@ var DotaPickerApp = {
             //Start creating list...
             output += "<div>";
             for (var x = 0; x < this.listElements + 5; x++) {
-                heroName = outputHeroesArray[x][0].replace(/\-/g, " ").capitalize();
+                heroName = this.heroString[outputHeroesArray[x][0]];
                 heroAdvantage = outputHeroesArray[x][1].toFixed(3);
-                console.log(heroAdvantage);
                 color = this.getColor(heroAdvantage);
                 if (this.addedHeroes[outputHeroesArray[x][0]] !== 1) {
                     output += "<div class='row' style='color:" + color + ";'>";
@@ -195,7 +182,7 @@ var DotaPickerApp = {
             }
 
             for (var y = outputHeroesArray.length - this.listElements; y < outputHeroesArray.length; y++) {
-                heroName = outputHeroesArray[y][0].replace(/\-/g, " ").capitalize();
+                heroName = this.heroString[outputHeroesArray[y][0]];
                 heroAdvantage = outputHeroesArray[y][1].toFixed(3);
                 color = this.getColor(heroAdvantage);
                 if (this.addedHeroes[outputHeroesArray[y][0]] !== 1) {
@@ -269,24 +256,23 @@ var DotaPickerApp = {
     }
 };
 
-//Framerwork7 init
-var App = new Framework7({
-    animateNavBackIcon: true
-});
-
-//Export selectors engine
-var $$ = Dom7;
-
-//Add main View
-var mainView = App.addView('.view-main', {
-    // Enable dynamic Navbar
-    dynamicNavbar: true,
-    // Enable Dom Cache so we can use all inline pages
-    domCache: true
-});
-
 $(document).ready(function(){
     $.getJSON("js/matchup.json", function(data){
+        //Framerwork7 init
+        var App = new Framework7({
+            animateNavBackIcon: true
+        });
+
+        //Export selectors engine
+        var $$ = Dom7;
+
+        //Add main View
+        var mainView = App.addView('.view-main', {
+            // Enable dynamic Navbar
+            dynamicNavbar: true,
+            // Enable Dom Cache so we can use all inline pages
+            domCache: true
+        });
         DotaPickerApp.init(data);
     })
 });
