@@ -1,11 +1,4 @@
 // /* jshint shadow:true */
-//
-// String.prototype.capitalize = function() {
-//     return this.replace(/(?:^|\s)\S/g, function(a) {
-//         return a.toUpperCase();
-//     });
-// };
-
 var DotaPickerApp = {
     VERSION: '3.3.0',
     initialized: false,
