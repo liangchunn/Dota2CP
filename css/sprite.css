@@ -1,0 +1,691 @@
+.hero-icon {
+    display: block;
+    height: 32px;
+    width: 32px;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    background-image: url('../sprites/sprite.png');
+}
+
+.hero-icon-axe {
+    background-position: -0px -0px;
+    width: 38px;
+    height: 38px;
+}
+
+.hero-icon-broodmother {
+    background-position: -0px -38px;
+    width: 35px;
+    height: 39px;
+}
+
+.hero-icon-techies {
+    background-position: -0px -77px;
+    width: 38px;
+    height: 39px;
+}
+
+.hero-icon-morphling {
+    background-position: -0px -116px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-arc-warden {
+    background-position: -0px -156px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-abaddon {
+    background-position: -0px -196px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-bane {
+    background-position: -0px -236px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-batrider {
+    background-position: -0px -276px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-beastmaster {
+    background-position: -0px -316px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-bloodseeker {
+    background-position: -0px -356px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-bounty-hunter {
+    background-position: -0px -396px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-brewmaster {
+    background-position: -0px -436px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-bristleback {
+    background-position: -0px -476px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-ancient-apparition {
+    background-position: -0px -516px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-centaur-warrunner {
+    background-position: -0px -556px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-chaos-knight {
+    background-position: -0px -596px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-chen {
+    background-position: -0px -636px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-clinkz {
+    background-position: -0px -676px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-clockwerk {
+    background-position: -0px -716px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-crystal-maiden {
+    background-position: -0px -756px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-dark-seer {
+    background-position: -0px -796px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-dazzle {
+    background-position: -0px -836px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-death-prophet {
+    background-position: -0px -876px;
+    width: 38px;
+    height: 40px;
+}
+
+.hero-icon-disruptor {
+    background-position: -0px -916px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-doom {
+    background-position: -0px -956px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-dragon-knight {
+    background-position: -0px -996px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-drow-ranger {
+    background-position: -0px -1036px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-earth-spirit {
+    background-position: -0px -1076px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-earthshaker {
+    background-position: -0px -1116px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-elder-titan {
+    background-position: -0px -1156px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-ember-spirit {
+    background-position: -0px -1196px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-enchantress {
+    background-position: -0px -1236px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-enigma {
+    background-position: -0px -1276px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-faceless-void {
+    background-position: -0px -1316px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-gyrocopter {
+    background-position: -0px -1356px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-huskar {
+    background-position: -0px -1396px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-invoker {
+    background-position: -0px -1436px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-io {
+    background-position: -0px -1476px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-jakiro {
+    background-position: -0px -1516px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-juggernaut {
+    background-position: -0px -1556px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-keeper-of-the-light {
+    background-position: -0px -1596px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-kunkka {
+    background-position: -0px -1636px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-legion-commander {
+    background-position: -0px -1676px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-leshrac {
+    background-position: -0px -1716px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-lich {
+    background-position: -0px -1756px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-lifestealer {
+    background-position: -0px -1796px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-lina {
+    background-position: -0px -1836px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-lion {
+    background-position: -0px -1876px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-lone-druid {
+    background-position: -0px -1916px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-luna {
+    background-position: -0px -1956px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-lycan {
+    background-position: -0px -1996px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-magnus {
+    background-position: -0px -2036px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-medusa {
+    background-position: -0px -2076px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-meepo {
+    background-position: -0px -2116px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-mirana {
+    background-position: -0px -2156px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-monkey-king {
+    background-position: -0px -2196px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-alchemist {
+    background-position: -0px -2236px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-naga-siren {
+    background-position: -0px -2276px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-natures-prophet {
+    background-position: -0px -2316px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-necrophos {
+    background-position: -0px -2356px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-night-stalker {
+    background-position: -0px -2396px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-nyx-assassin {
+    background-position: -0px -2436px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-ogre-magi {
+    background-position: -0px -2476px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-omniknight {
+    background-position: -0px -2516px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-oracle {
+    background-position: -0px -2556px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-outworld-devourer {
+    background-position: -0px -2596px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-phantom-assassin {
+    background-position: -0px -2636px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-phantom-lancer {
+    background-position: -0px -2676px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-phoenix {
+    background-position: -0px -2716px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-puck {
+    background-position: -0px -2756px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-pudge {
+    background-position: -0px -2796px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-pugna {
+    background-position: -0px -2836px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-queen-of-pain {
+    background-position: -0px -2876px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-razor {
+    background-position: -0px -2916px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-riki {
+    background-position: -0px -2956px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-rubick {
+    background-position: -0px -2996px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-sand-king {
+    background-position: -0px -3036px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-shadow-demon {
+    background-position: -0px -3076px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-shadow-fiend {
+    background-position: -0px -3116px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-shadow-shaman {
+    background-position: -0px -3156px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-silencer {
+    background-position: -0px -3196px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-skywrath-mage {
+    background-position: -0px -3236px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-slardar {
+    background-position: -0px -3276px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-slark {
+    background-position: -0px -3316px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-sniper {
+    background-position: -0px -3356px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-spectre {
+    background-position: -0px -3396px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-spirit-breaker {
+    background-position: -0px -3436px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-storm-spirit {
+    background-position: -0px -3476px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-sven {
+    background-position: -0px -3516px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-anti-mage {
+    background-position: -0px -3556px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-templar-assassin {
+    background-position: -0px -3596px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-terrorblade {
+    background-position: -0px -3636px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-tidehunter {
+    background-position: -0px -3676px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-timbersaw {
+    background-position: -0px -3716px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-tinker {
+    background-position: -0px -3756px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-tiny {
+    background-position: -0px -3796px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-treant-protector {
+    background-position: -0px -3836px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-troll-warlord {
+    background-position: -0px -3876px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-tusk {
+    background-position: -0px -3916px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-underlord {
+    background-position: -0px -3956px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-undying {
+    background-position: -0px -3996px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-ursa {
+    background-position: -0px -4036px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-vengeful-spirit {
+    background-position: -0px -4076px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-venomancer {
+    background-position: -0px -4116px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-viper {
+    background-position: -0px -4156px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-visage {
+    background-position: -0px -4196px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-warlock {
+    background-position: -0px -4236px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-weaver {
+    background-position: -0px -4276px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-windranger {
+    background-position: -0px -4316px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-winter-wyvern {
+    background-position: -0px -4356px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-witch-doctor {
+    background-position: -0px -4396px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-wraith-king {
+    background-position: -0px -4436px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero-icon-zeus {
+    background-position: -0px -4476px;
+    width: 40px;
+    height: 40px;
+}

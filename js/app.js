@@ -1,6 +1,6 @@
 // /* jshint shadow:true */
 var DotaPickerApp = {
-    VERSION: '3.3.1',
+    VERSION: '3.3.2',
     initialized: false,
     init: function(data) {
         //instanceName
@@ -47,7 +47,7 @@ var DotaPickerApp = {
         //add heroes to list
         for (var x = 0; x < this.heroesLength; x++) {
             list.add({
-                item: "<div class='item-media' id='selector-" + this.heroes[x] + "'><i class='icon'>" + "<img src='icons/" + this.heroes[x] + ".png'/>  " + "</i></div>" + "<div class='item-inner'><div class='item-title'>" + this.heroString[this.heroes[x]] + "</div></div>",
+                item: "<div class='item-media' id='selector-" + this.heroes[x] + "'><i class='icon'>" + "<span class='hero-icon hero-icon-"+this.heroes[x]+"'></span>" + "</i></div>" + "<div class='item-inner'><div class='item-title'>" + this.heroString[this.heroes[x]] + "</div></div>",
                 eventHandler: this.instanceName + ".addHero('" + this.heroes[x] + "');"
             });
         }
@@ -141,7 +141,7 @@ var DotaPickerApp = {
 
         for (property in this.addedHeroes) {
             if (this.addedHeroes[property] === 1) {
-                placeholder += "<button href='#' class='buttonCustom' onclick='" + this.instanceName + ".removeHero(\"" + property + "\");'><img src='icons/" + property + ".png'/></button>";
+                placeholder += "<button href='#' class='buttonCustom' onclick='" + this.instanceName + ".removeHero(\"" + property + "\");'><span class='hero-icon hero-icon-"+property+"'></span></button>";
             }
         }
         placeholder += "</center>";
